@@ -10,6 +10,7 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
 
+import box2dLight.DirectionalLight;
 import box2dLight.PointLight;
 import box2dLight.RayHandler;
 
@@ -42,7 +43,8 @@ public class Box2DTest extends ApplicationAdapter {
 		handler = new RayHandler(world);
 		//handler.setShadows(false);
 		
-		new PointLight(handler, 100, new Color(1, 1, 1, 1), 8, 20, 10);
+		new PointLight(handler, 500, new Color(1, 1, 1, 1), 16, 20, 10);
+		//new DirectionalLight(handler, 500, new Color(1, 1, 1, 1), -90);
 	}
 	
 	public void render() {
